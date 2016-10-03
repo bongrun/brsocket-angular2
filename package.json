@@ -1,0 +1,43 @@
+{
+  "name": "brsocket-angular2",
+  "version": "0.0.1",
+  "description": "BRSocket-Angular2",
+  "keywords": [
+    "bong.run",
+    "bong",
+    "socket",
+    "angular",
+    "angular2",
+    "event",
+    "message"
+  ],
+  "author": "Pasechnik Vladislav <jump.e.r@yandex.ru>",
+  "homepage": "https://github.com/bongrun/brsocket-angular2",
+  "license": "Apache 2.0",
+  "scripts": {
+    "start": "pm2 start pm2-socket.json",
+    "restart": "pm2 restart pm2-socket.json",
+    "stop": "pm2 stop pm2-socket.json",
+    "prepublish": "tsc"
+  },
+  "dependencies": {
+    "@angular/common": "2.0.0",
+    "@angular/core": "2.0.0",
+    "lodash": "^4.15.0",
+    "angular2-websocket": "^0.6.3"
+  },
+  "devDependencies": {
+    "typescript": "^2.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bongrun/brsocket-angular2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bongrun/brsocket-angular2/issues"
+  },
+  "engines": {
+    "node": ">= 4.2.1",
+    "npm": ">= 3"
+  }
+}
