@@ -7,7 +7,7 @@
     "noEmitHelpers": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true,
+    "declaration": true,
     "pretty": true,
     "allowUnreachableCode": true,
     "allowUnusedLabels": true,
@@ -18,6 +18,9 @@
     "allowSyntheticDefaultImports": true,
     "suppressExcessPropertyErrors": true,
     "suppressImplicitAnyIndexErrors": true,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "inlineSourceMap": true,
     "outDir": "dist"
   },
   "files": [

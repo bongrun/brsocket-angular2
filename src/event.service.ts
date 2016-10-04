@@ -1,4 +1,4 @@
-import events = require('events')
+import events = require('events');
 import {BaseModel} from "./base-model";
 import {ObjectHelper} from "./object.helper";
 import {Injectable} from "@angular/core";
