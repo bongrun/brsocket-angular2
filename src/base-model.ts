@@ -39,7 +39,7 @@ export class BaseModel {
         this.error.status = error.status;
         this.error.userMessage = error.userMessage;
         this.error.fields = error.data;
-        if ('development' === ENV && error.developerMessage) {
+        if ('development' === process.env.NODE_ENV && error.developerMessage) {
             this.error.developerMessage = error.developerMessage;
         }
     }

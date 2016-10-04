@@ -31,26 +31,24 @@ export class EventService {
      * @param callback
      * @param _model В какую модель преобразовать данные первого аргумента функции
      */
-    on(eventName: string, callback: Function, _model? = BaseModel) {
+    on(eventName: string, callback: Function, _model = BaseModel) {
         this.emitter.on(this.getEventName(eventName), function (..._args: any[]) {
             if (typeof _model !== "undefined" && typeof _args[0] !== "undefined") {
                 if (_.isArray(_args[0])) {
                     var _result = [];
                     _args[0].data.forEach(function(_item){
-                        if (_item.constructor.name !== _model.name) {
+                        if (_item.constructor.name !== _.get(_model, 'name')) {
                             _result.push(ObjectHelper.setPropertiesObject(_model, _item));
                         } else {
                             _result.push(_item);
                         }
                     });
+                    _args[0] = _result;
                 } else {
-                    if (_args[0].constructor.name !== _model.name) {
-                        var _result = ObjectHelper.setPropertiesObject(_model, _args[0]);
-                    } else {
-                        var _result = _args[0];
+                    if (_args[0].constructor.name !== _.get(_model, 'name')) {
+                        _args[0] = ObjectHelper.setPropertiesObject(_model, _args[0]);
                     }
                 }
-                _args[0] = _result;
             }
             callback(..._args);
         });

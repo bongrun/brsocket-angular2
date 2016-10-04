@@ -1,17 +1,31 @@
 {
   "compilerOptions": {
-    "noImplicitAny": true,
+    "target": "es5",
+    "lib": ["es5", "es6", "dom"],
     "module": "commonjs",
-    "target": "ES5",
+    "moduleResolution": "node",
+    "noEmitHelpers": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "declaration": true
+    "pretty": true,
+    "allowUnreachableCode": true,
+    "allowUnusedLabels": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitUseStrict": false,
+    "noFallthroughCasesInSwitch": false,
+    "allowSyntheticDefaultImports": true,
+    "suppressExcessPropertyErrors": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "outDir": "dist"
   },
   "files": [
-    "src/socket.service.ts"
+    "src/socket.module.ts"
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false
 }
