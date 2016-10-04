@@ -21,10 +21,10 @@
     "noEmitOnError": true,
     "removeComments": false,
     "inlineSourceMap": true,
-    "outDir": "dist"
+    "outDir": "./"
   },
   "files": [
-    "src/socket.module.ts"
+    "src/index.ts"
   ],
   "exclude": [
     "node_modules"
