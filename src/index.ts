@@ -12,6 +12,9 @@ import {EventService} from "./event.service";
     ],
     declarations: [
     ],
+    exports: [
+        SocketService
+    ],
     providers: [
         SocketService, EventService
     ],
